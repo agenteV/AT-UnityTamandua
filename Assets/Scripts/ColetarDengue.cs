@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class ColetarDengue : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }   
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Tamandua"))
+        private void OnCollisionEnter2D(Collision2D collision)
+        
         {
-            gameObject.SetActive(false);
+            if (collision.gameObject.name.Equals("Tamandua"))
+            {
+                Destroy(collision.gameObject);
+
+            }
+
         }
-    }
 
 }
