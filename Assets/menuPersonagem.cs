@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 
 
-public class menuController : MonoBehaviour
+public class menuPersonagem : MonoBehaviour
 {
     private UIDocument document;
     private Button button;
@@ -15,7 +15,7 @@ public class menuController : MonoBehaviour
     private void Awake()
     {
         document = GetComponent<UIDocument>();
-        button = document.rootVisualElement.Q<Button>("btnJgr");
+        button = document.rootVisualElement.Q<Button>("btnT");
         button.RegisterCallback<ClickEvent>(OnPlayGameClick);
     }
     private void OnDisable()
@@ -25,6 +25,6 @@ public class menuController : MonoBehaviour
     // Update is called once per frame
     private void OnPlayGameClick(ClickEvent evt)
     {
-        SceneManager.LoadScene("Menu2");
+        SceneManager.LoadScene("SampleScene");
     }
 }
